@@ -21,13 +21,12 @@ class CreateClientsTable extends Migration
             $table->string('emailClient')->unique();
             $table->string('usernameClient')->unique();
             $table->string('passwordClient');
-            $table->integer('idRole')->nullable();
+            $table->integer('idRole');
             $table->string('client_token');
             $table->datetime('client_tokenexpirytime')->unique();
             $table->datetime('client_created')->unique();
             $table->datetime('client_updated')->unique();
             $table->integer('client_status')->unique();
-            $table->integer('language_id');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

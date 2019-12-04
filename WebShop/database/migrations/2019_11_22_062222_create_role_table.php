@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHistorySearchTable extends Migration
+class CreateRoleTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateHistorySearchTable extends Migration
      */
     public function up()
     {
-        Schema::create('history_search', function (Blueprint $table) {
-            $table->bigIncrements('idHistorySearch');
-            $table->integer('idClient');
-            $table->softDeletes();
-            $table->rememberToken();
+        Schema::create('role', function (Blueprint $table) {
+            $table->bigIncrements('idRole');
+            $table->string('nameRole');
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ class CreateHistorySearchTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('history_search');
+        Schema::dropIfExists('role');
     }
 }

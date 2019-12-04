@@ -16,7 +16,7 @@ class CreateMenuChildTable extends Migration
         Schema::create('menu_child', function (Blueprint $table) {
             $table->bigIncrements('idMenuChild');
             $table->string('nameMenuChild')->nullable();
-            $table->biginteger('idMenuFather')->unique();
+            $table->biginteger('idMenuFather');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

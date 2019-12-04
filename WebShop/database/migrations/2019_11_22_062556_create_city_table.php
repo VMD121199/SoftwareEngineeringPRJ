@@ -15,7 +15,7 @@ class CreateCityTable extends Migration
     {
         Schema::create('city', function (Blueprint $table) {
             $table->bigIncrements('idCity');
-            $table->string('nameCity')->unique();
+            $table->string('nameCity');
             $table->softDeletes();
             $table->rememberToken();
             $table->timestamps();

@@ -1,0 +1,145 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: montserrat;
+	text-decoration: none;
+}
+body{
+	font-size: 14pt;
+	min-height: 100vh;
+/*	background-image: linear-gradient(#F59F16,#F8BA56,#F9CE8A);*/
+	background-image: linear-gradient(120deg,#F4FBA2,#FCEF3D);
+}
+.boxcenter{
+	width: 1180px;
+	margin: 0 auto;
+}
+.box100pt{
+	float: left;
+	width: 100%;
+}
+.bgyellow{
+	background-color: #FBBB0B;
+	min-height: 60px;
+}
+.logo{
+	float: left;
+	width: 10%;
+}
+.logo img{
+	height: 60px;
+	padding: 0px 20px; 
+}
+a{
+	float: right;
+	line-height: 60px; /*căn giữa theo chiều cao*/
+	color: black;
+	padding: 0px 20px; /* 0 trên dưới, 20 trái phải*/
+	text-decoration: none;
+}
+a:hover{
+	color: white;
+	background-color: #DAB95E;
+}
+button{
+	border: none;
+	width: 150px;
+	background: #F7611B;
+	color: #fff;
+	font-size: 20px;
+	line-height: 25px;
+	padding: 10px 0;
+	border-radius: 15px;
+	cursor: pointer;
+}
+button:hover{
+	color: #fff;
+	background-color: black;
+}
+.rgtform{
+  width: 450px;
+  background: #f1f1f1;
+  height: 480px;
+  padding: 40px 40px;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%,-50%);
+}
+
+.rgtform h3{
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+input[type="text"]{
+    width: 380px;
+    text-align: left;
+    margin-top: 10px;
+    background: #FDFFCF;
+    border: none;
+    border-bottom: 1px solid #F9A113;
+    font-family: 'Play' sans-serif;
+    font-size: 20px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: black;
+}
+input[type="email"]{
+    width: 380px;
+    text-align: left;
+    background: #FDFFCF;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid #F9A113;
+    font-family: 'Play' sans-serif;
+    font-size: 20px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: black;
+}
+input[type="password"]{
+    width: 380px;
+    text-align: left;
+    margin-top: 10px;
+    background: #FDFFCF;
+    border: none;
+    border-bottom: 1px solid #F9A113;
+    font-family: 'Play' sans-serif;
+    font-size: 20px;
+    font-weight: 200px;
+    padding: 10px 0;
+    transition: border 0.5s;
+    outline: none;
+    color: black;
+}
+
+
+::placeholder{
+  color: #000;
+  opacity: 0.5;
+}
+/*.btn-primary {
+    border: none;
+    width: 150px;
+    background: #D0D28E;
+    color: #000;
+    font-size: 22px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn-primary:hover {
+  background-color: black;
+}*/
+.rgtbtn{
+	text-align: center;
+}
