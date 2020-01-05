@@ -12,7 +12,6 @@ def tienXuLy(image, MaTranKhuNhieu):
     image = cv2.threshold(image, 175, 255, cv2.THRESH_BINARY)[1]
     image = cv2.Canny(image, 230, 255)
     image = cv2.dilate(image, MaTranKhuNhieu, iterations=3)
-    cv2.imshow("Test1", image)
     return image
 
 
@@ -27,7 +26,14 @@ def xacDinhBienSo(image):
             img_crop1 = original[y:y + h, x:x + w]
             img_crop = cv2.cvtColor(img_crop1, cv2.COLOR_BGR2GRAY)
             img_crop = cv2.threshold(img_crop, 175, 255, cv2.THRESH_BINARY)[1]
-            cv2.imshow("Test", img_crop)
+            cv2.imshow("Long Plate", img_crop)
+            cv2.rectangle(original, (x, y), (x + w, y + h), (127, 255, 127), 3)
+        # Biển số xe dạng ngắn(thường được đặt ở phía sau)
+        if len(approx) == 4 and 2 * h >= w >= h and 10000 > cv2.contourArea(c) > 3500:
+            img_crop = original[y:y + h, x:x + w]
+            img_crop = cv2.cvtColor(img_crop, cv2.COLOR_BGR2GRAY)
+            img_crop = cv2.threshold(img_crop, 160, 255, cv2.THRESH_BINARY)[1]
+            cv2.imshow("Short Plate", img_crop)
             cv2.rectangle(original, (x, y), (x + w, y + h), (127, 255, 127), 3)
 
 img = cv2.imread("images/Test1.png")
